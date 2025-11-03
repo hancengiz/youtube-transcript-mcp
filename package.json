@@ -1,0 +1,55 @@
+{
+  "name": "@fabriqa.ai/youtube-transcript-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for retrieving YouTube video transcripts for Claude Code",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "youtube-transcript-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test-server.js"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "youtube",
+    "transcript",
+    "video",
+    "subtitles",
+    "claude",
+    "claude-code",
+    "ai",
+    "model-context-protocol"
+  ],
+  "author": {
+    "name": "Cengiz Han",
+    "url": "https://cengizhan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hancengiz/youtube-transcript-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hancengiz/youtube-transcript-mcp/issues"
+  },
+  "homepage": "https://github.com/hancengiz/youtube-transcript-mcp#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "update-config.js"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "youtube-transcript": "^1.2.1"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
