@@ -373,10 +373,6 @@ And then automatically organize the insights into my Obsidian vault.
 - [PDF Reader MCP](https://www.cengizhan.com/p/vibe-coded-a-pdf-reader-mcp-tool) - Previous blog post
 - [Claude Code](https://docs.claude.com/claude-code) - The AI coding assistant that became my learning assistant
 
-**Want to follow along?** I'm building in public at [cengizhan.com](https://cengizhan.com) and sharing learnings as I go.
-
-**Got ideas for other MCP tools?** Hit me up. I'm clearly on a roll here. 🚀
-
 ---
 
 *P.S. - Yes, I wrote this blog post with Claude Code. Here's how that actually works:*
