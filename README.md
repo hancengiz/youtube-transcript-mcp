@@ -129,15 +129,15 @@ Retrieve the transcript of a YouTube video.
 
 **Example:**
 ```
-Can you get the transcript from https://www.youtube.com/watch?v=dQw4w9WgXcQ?
+Can you get the transcript from https://www.youtube.com/watch?v=LCEmiRjPEtQ?
 ```
 
 ```
-Get the transcript from this video without timestamps: https://youtu.be/dQw4w9WgXcQ
+Get the transcript from this video without timestamps: https://youtu.be/LCEmiRjPEtQ
 ```
 
 ```
-Get the Spanish transcript from https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Summarize the key learnings from this Andrej Karpathy talk: https://www.youtube.com/watch?v=LCEmiRjPEtQ
 ```
 
 ### 2. get-transcript-languages
@@ -149,7 +149,7 @@ Check what transcript languages are available for a video.
 
 **Example:**
 ```
-What transcript languages are available for https://www.youtube.com/watch?v=dQw4w9WgXcQ?
+What transcript languages are available for https://www.youtube.com/watch?v=LCEmiRjPEtQ?
 ```
 
 ## Example Workflow
@@ -158,32 +158,39 @@ Here's how you might use this MCP server with Claude Code:
 
 1. **Extract a transcript to summarize a video**:
    ```
-   Get the transcript from https://www.youtube.com/watch?v=VIDEO_ID and summarize the key points
+   Give me the key learnings from this Andrej Karpathy talk: https://www.youtube.com/watch?v=LCEmiRjPEtQ
    ```
 
 2. **Analyze specific topics in a video**:
    ```
-   Get the transcript from this tech talk and extract all mentions of "machine learning"
+   Get the transcript from https://www.youtube.com/watch?v=LCEmiRjPEtQ and extract all mentions of "LLM" and "agents"
    ```
 
 3. **Get transcripts in different languages**:
    ```
-   Get the Spanish version of the transcript from https://youtu.be/VIDEO_ID
+   What transcript languages are available for https://www.youtube.com/watch?v=LCEmiRjPEtQ?
    ```
 
-4. **Extract quotes without timestamps**:
+4. **Extract quotes without timestamps** (for long videos):
    ```
-   Get the transcript without timestamps from this video: https://www.youtube.com/watch?v=VIDEO_ID
+   Get the transcript without timestamps from this video: https://www.youtube.com/watch?v=LCEmiRjPEtQ
+   ```
+   Note: This 60-minute video generates ~19k tokens without timestamps vs ~30k with timestamps.
+
+5. **Research and content creation**:
+   ```
+   Get 3 key quotes from Andrej Karpathy about partial autonomy apps from https://www.youtube.com/watch?v=LCEmiRjPEtQ
    ```
 
 ## Use Cases
 
-- **Content Summarization**: Quickly summarize long videos without watching them
-- **Research**: Extract information from educational videos and lectures
-- **Content Creation**: Get quotes and references from video content
-- **Accessibility**: Convert video content to text for easier reading
-- **Translation**: Use transcripts as a base for translation work
-- **SEO**: Extract video content for blog posts or articles
+- **Content Summarization**: Extract key learnings from hour-long technical talks (e.g., Andrej Karpathy's "Software in the Era of AI")
+- **Research**: Analyze conference talks, academic lectures, and educational content without watching
+- **Content Creation**: Get accurate quotes and references from video content for blog posts or articles
+- **Learning & Education**: Quickly review lecture content, extract main concepts and examples
+- **Accessibility**: Convert video content to searchable, readable text format
+- **Interview Analysis**: Extract quotes and insights from podcast interviews and panel discussions
+- **Technical Documentation**: Pull code examples and technical explanations from tutorial videos
 
 ## Benefits
 
@@ -201,6 +208,42 @@ Here's how you might use this MCP server with Claude Code:
 - Runs as a local Node.js process communicating via stdio
 - Supports all YouTube videos with available transcripts/captions
 - Direct integration with YouTube's Innertube API for reliable transcript access
+
+## Limitations
+
+### MCP Protocol Token Limit
+
+The MCP (Model Context Protocol) infrastructure has a **25,000 token response limit** to protect Claude's context window and prevent performance issues. This limit is imposed by the MCP protocol layer, not by YouTube or this tool.
+
+**What this means:**
+- Very long video transcripts (typically 60+ minutes) with timestamps enabled may exceed this limit
+- The transcript fetches successfully from YouTube, but MCP blocks the response if it's too large
+
+**Symptoms:**
+```
+Error: MCP tool "get-transcript" response (30131 tokens) exceeds
+maximum allowed tokens (25000). Please use pagination, filtering,
+or limit parameters to reduce the response size.
+```
+
+**Solutions:**
+
+1. **Disable timestamps** (recommended for long videos):
+   ```
+   Get the transcript without timestamps from https://www.youtube.com/watch?v=VIDEO_ID
+   ```
+   This typically reduces response size by 20-30%, making most videos fit within the limit.
+
+2. **Request shorter videos** (under 60 minutes usually work with timestamps)
+
+3. **Process in chunks**: For very long videos, you may need to work with the transcript data programmatically rather than through the MCP tool
+
+**Real-world example (Andrej Karpathy's talk):**
+- https://www.youtube.com/watch?v=LCEmiRjPEtQ (60-minute technical talk)
+- With timestamps: ~30,000 tokens ❌ (exceeds 25k limit)
+- Without timestamps: ~19,000 tokens ✅ (works perfectly)
+
+**Workaround:** Simply ask "Get the transcript **without timestamps**" for long videos.
 
 ## Troubleshooting
 
