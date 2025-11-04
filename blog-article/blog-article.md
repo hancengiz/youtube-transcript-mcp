@@ -1,4 +1,4 @@
-# Claude Code Became My Learning Assistant (And Now I'm Not Sure If I Need to Watch Videos Anymore)
+# One More Piece Built: Adding YouTube Analysis to My Learning Iron Man Suit
 
 Look, I have a problem. There are too many videos to watch, too little time, and my YouTube "Watch Later" list has become a graveyard of good intentions. You know how it goes:
 
