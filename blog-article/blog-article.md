@@ -194,7 +194,7 @@ Friend: "You should learn OpenSpec! Watch this tutorial!"
 
 ```
 Me: "What are the key selling points of OpenSpec from this tutorial?
-     How does it compare to other API specification tools? Is it worth adopting?"
+     How does it compare to other spec-driven development tools? Is it worth adopting?"
 
 Claude: *analyzes tutorial*
         "Main innovations: [key features]...
