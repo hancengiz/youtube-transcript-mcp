@@ -167,6 +167,8 @@ So now:
 
 It's like having unlimited working memory for learning.
 
+**Want to create your own sub-agent for this MCP tool?** Check out the [complete guide to setting up the youtube-transcript-analyzer agent](https://github.com/hancengiz/youtube-transcript-mcp/blob/main/CLAUDE_CODE_AGENT_GUIDE.md) - includes full configuration, examples, and how to customize it for your workflow.
+
 ## Real Use Cases (That Actually Changed How I Learn)
 
 ### 1. **The Conference Sprint**
