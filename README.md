@@ -50,9 +50,37 @@ npm install
 ### If installed via npm (Recommended):
 
 #### Option 1: Using Claude Code CLI (Easiest)
+
+**Recommended: Machine-Wide Installation**
 ```bash
-# Add the MCP server
-claude mcp add youtube-transcript npx @fabriqa.ai/youtube-transcript-mcp@latest
+# Add the MCP server for all projects (machine-wide)
+claude mcp add --scope user youtube-transcript npx @fabriqa.ai/youtube-transcript-mcp@latest
+```
+
+**Understanding Scope Options:**
+
+Claude Code supports three configuration scopes for MCP servers:
+
+- **`--scope user`** (Recommended) - **Machine-wide**
+  - Available in ALL projects and directories
+  - Configured once, works everywhere
+  - Perfect for tools you use regularly across different projects
+
+- **`--scope local`** (Default) - **Project-specific**
+  - Only available in the current directory and subdirectories
+  - Useful for project-specific MCP servers
+  - Each project must configure separately
+
+- **`--scope project`** - **Explicit project**
+  - For specific project configurations
+
+**Example usage:**
+```bash
+# Machine-wide (recommended for youtube-transcript)
+claude mcp add --scope user youtube-transcript npx @fabriqa.ai/youtube-transcript-mcp@latest
+
+# Project-specific (if you prefer)
+claude mcp add --scope local youtube-transcript npx @fabriqa.ai/youtube-transcript-mcp@latest
 
 # Or use the convenience script
 npx @fabriqa.ai/youtube-transcript-mcp/update-config.js
