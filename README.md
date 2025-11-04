@@ -182,6 +182,46 @@ Here's how you might use this MCP server with Claude Code:
    Get 3 key quotes from Andrej Karpathy about partial autonomy apps from https://www.youtube.com/watch?v=LCEmiRjPEtQ
    ```
 
+## Advanced: Using Claude Code Sub-Agents for Context Efficiency
+
+**Save 90% of your context when analyzing videos!**
+
+Claude Code supports specialized sub-agents that can analyze YouTube videos in an isolated context, returning only the insights to your main conversation. This means you can analyze many videos without filling up your context window with large transcripts.
+
+### Quick Example
+
+Instead of this (fills your context with 20k+ tokens):
+```
+Get the transcript and analyze this video: [URL]
+```
+
+Do this (only ~2k tokens in your context):
+```
+Use sub-agent to analyze this video: [URL]
+```
+
+### The youtube-transcript-analyzer Agent
+
+This specialized agent:
+- ✅ Fetches transcripts in its own isolated context
+- ✅ Analyzes the content thoroughly
+- ✅ Returns ONLY the analysis to you
+- ✅ Lets you analyze 10+ videos in one session
+- ✅ Keeps your context clean and focused
+
+### Learn More
+
+**📖 [Complete Claude Code Sub-Agent Guide](./CLAUDE_CODE_AGENT_GUIDE.md)**
+
+The guide includes:
+- How sub-agents save context (with examples)
+- Complete setup instructions for the youtube-transcript-analyzer agent
+- Configuration files you can copy directly
+- Real-world usage examples and workflows
+- Advanced tips for analyzing multiple videos efficiently
+
+**Perfect for:** Researchers, content creators, students, and anyone analyzing multiple videos in one session.
+
 ## Use Cases
 
 - **Content Summarization**: Extract key learnings from hour-long technical talks (e.g., Andrej Karpathy's "Software in the Era of AI")
