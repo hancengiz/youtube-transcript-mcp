@@ -1,6 +1,6 @@
 {
   "name": "@fabriqa.ai/youtube-transcript-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server for retrieving YouTube video transcripts for Claude Code",
   "type": "module",
   "main": "index.js",
