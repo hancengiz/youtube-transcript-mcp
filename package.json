@@ -5,7 +5,9 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "youtube-transcript-mcp": "./index.js"
+    "youtube-transcript-mcp": "./index.js",
+    "youtube-transcript-mcp-install": "./update-config.js",
+    "youtube-transcript-mcp-register": "./lib/mcp-installer/cli.js"
   },
   "scripts": {
     "start": "node index.js",
@@ -43,7 +45,8 @@
     "index.js",
     "README.md",
     "update-config.js",
-    "yt-lib/"
+    "yt-lib/",
+    "lib/"
   ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4"

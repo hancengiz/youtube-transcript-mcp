@@ -47,9 +47,49 @@ npm install
 
 ## Configuration
 
-### If installed via npm (Recommended):
+### NEW: Automatic Registration to All MCP Clients
 
-#### Option 1: Using Claude Code CLI (Easiest)
+**🎉 The easiest way to get started!** This package now includes an automatic installer that can register the MCP server with **all supported clients** in one command:
+
+```bash
+# Register to ALL installed MCP clients (Claude Code, Claude Desktop, Cursor, etc.)
+npx @fabriqa.ai/youtube-transcript-mcp-register register --all
+
+# Or register to a specific client
+npx @fabriqa.ai/youtube-transcript-mcp-register register --to claude-code
+npx @fabriqa.ai/youtube-transcript-mcp-register register --to claude-desktop
+npx @fabriqa.ai/youtube-transcript-mcp-register register --to cursor
+```
+
+**Supported clients:**
+- `claude-code` - Claude Code CLI
+- `claude-desktop` - Claude Desktop app
+- `cursor` - Cursor IDE
+- `cline` - Cline VSCode extension
+- `roo-cline` - Roo-Cline VSCode extension
+- `continue` - Continue.dev
+
+**Other useful commands:**
+```bash
+# Detect which MCP clients are installed
+npx @fabriqa.ai/youtube-transcript-mcp-register detect
+
+# List registration status for all clients
+npx @fabriqa.ai/youtube-transcript-mcp-register list
+
+# Verify configuration for a specific client
+npx @fabriqa.ai/youtube-transcript-mcp-register verify --client claude-code
+
+# Unregister from a client
+npx @fabriqa.ai/youtube-transcript-mcp-register unregister --from claude-code
+
+# Show all available commands
+npx @fabriqa.ai/youtube-transcript-mcp-register help
+```
+
+### Alternative: Manual Configuration
+
+#### Option 1: Using Claude Code CLI
 
 **Recommended: Machine-Wide Installation**
 ```bash
