@@ -45,6 +45,8 @@ Here's my typical YouTube workflow (or lack thereof):
 
 There had to be a better way.
 
+![Building my learning Iron Man suit, one tool at a time](./ironman-suit.png)
+
 ## Enter: YouTube Transcript MCP + Claude Code
 
 So I built another tool. (Yeah, I know. 🤓)
