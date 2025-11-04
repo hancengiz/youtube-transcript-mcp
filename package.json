@@ -42,11 +42,11 @@
   "files": [
     "index.js",
     "README.md",
-    "update-config.js"
+    "update-config.js",
+    "yt-lib/"
   ],
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.4",
-    "youtube-transcript": "^1.2.1"
+    "@modelcontextprotocol/sdk": "^1.0.4"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
