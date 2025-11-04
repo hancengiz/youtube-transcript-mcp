@@ -196,9 +196,11 @@ Here's how you might use this MCP server with Claude Code:
 ## Technical Details
 
 - Built with the [@modelcontextprotocol/sdk](https://www.npmjs.com/package/@modelcontextprotocol/sdk)
-- Uses [youtube-transcript](https://github.com/Kakulukian/youtube-transcript) for transcript extraction
+- Uses a custom-built YouTube transcript library (`yt-lib/`)
+- Zero external dependencies for transcript fetching (uses native fetch API)
 - Runs as a local Node.js process communicating via stdio
 - Supports all YouTube videos with available transcripts/captions
+- Direct integration with YouTube's Innertube API for reliable transcript access
 
 ## Troubleshooting
 
@@ -265,7 +267,3 @@ Created by [Cengiz Han](https://cengizhan.com)
 ## Contributing
 
 Feel free to submit issues or pull requests to improve this MCP server.
-
-## Related Projects
-
-- [PDF Reader MCP](https://github.com/hancengiz/read_pdf_as_text_mcp) - Extract text from PDF files

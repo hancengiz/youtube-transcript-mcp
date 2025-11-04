@@ -21,7 +21,7 @@ Build an MCP (Model Context Protocol) server that retrieves transcripts from You
   - URLs with additional parameters (timestamps, playlists, etc.)
 
 ### 2. Transcript Fetching
-- Use YouTube Transcript API library (e.g., `youtube-transcript-api` for Python or similar)
+- Use custom YouTube transcript library
 - Handle multiple languages if available
 - Return formatted transcript text
 
@@ -34,13 +34,13 @@ Build an MCP (Model Context Protocol) server that retrieves transcripts from You
 ## Technology Stack Options
 
 ### Option 1: Python
-- **Pros**: Mature `youtube-transcript-api` library available
-- **Library**: `youtube-transcript-api`
+- **Pros**: Good libraries available
+- **Library**: Custom implementation
 - **MCP SDK**: Official Python MCP SDK
 
 ### Option 2: TypeScript/Node.js
 - **Pros**: Good TypeScript support, modern async/await
-- **Library**: `youtube-transcript` npm package
+- **Library**: Custom implementation
 - **MCP SDK**: Official TypeScript MCP SDK
 
 ## Implementation Steps
