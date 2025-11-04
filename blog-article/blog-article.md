@@ -186,16 +186,16 @@ Result: 30-minute synthesis vs. 8 hours of watching
 
 ### 2. **The "Should I Learn This Framework?" Decision**
 
-Friend: "You should learn Svelte! Watch this tutorial!"
+Friend: "You should learn OpenSpec! Watch this tutorial!"
 
 ```
-Me: "What are the key selling points of Svelte from this tutorial?
-     How does it differ from React? Is it worth switching?"
+Me: "What are the key selling points of OpenSpec from this tutorial?
+     How does it compare to other API specification tools? Is it worth adopting?"
 
 Claude: *analyzes tutorial*
-        "Main innovations: no virtual DOM, compile-time optimization...
+        "Main innovations: [key features]...
          Worth learning if: [specific criteria]
-         Stick with React if: [other criteria]"
+         Stick with current tools if: [other criteria]"
 
 Decision made. No 2-hour commitment required.
 ```
@@ -251,7 +251,7 @@ It's like having a research assistant who:
 
 Here's where it gets weird.
 
-For some videos, **I don't watch them at all**. I just get the transcript analysis and move on. The information transfer is complete.
+For some videos, **I don't watch them at all**. I just get the transcript analysis and move on. I've only been using this approach for the last week, so time will tell. But the whole idea of having this is to be able to skip videos that I don't even need to spend my time on.
 
 For others, I watch AFTER getting the analysis. And you know what? **I get way more out of them.** Because I know what to look for. I'm watching with intention.
 
@@ -362,8 +362,6 @@ Or not. Claude will tell me which ones are worth it.
 
 And then automatically organize the insights into my Obsidian vault.
 
-(See? I told you this was going somewhere.)
-
 ---
 
 **Tools mentioned:**
@@ -377,4 +375,12 @@ And then automatically organize the insights into my Obsidian vault.
 
 ---
 
-*P.S. - Yes, I used Claude to help edit this blog post. Yes, that's meta. No, I don't care. We're living in the future, folks.*
+*P.S. - Yes, I wrote this blog post with Claude Code. Here's how that actually works:*
+
+*I gave Claude a draft blueprint of what I wanted to cover—my ideas, my experiences, my unique perspective. Then I had Claude Code generate the text. These are all my ideas, my intellectual property. It's not "AI-generated" in the sense that AI came up with it—the text is written by AI, but the thoughts are mine.*
+
+*Think of it like AI-assisted coding: You create the specification and design for your software, the AI-assisted tool generates the code, but it's still YOUR software because you did the design and put your intellectual property into it. You iterate—modify the spec, adjust the prompt, refine the output—until you get what you wanted. Kind of like vibe coding, but for writing.*
+
+*That's exactly how I write these articles. I provide the blueprint and ideas, Claude generates the text, and then I iterate until it matches what I wanted to say.*
+
+*So yes, that's meta. No, I don't care. We're living in the future, folks.*
