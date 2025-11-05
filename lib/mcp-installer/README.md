@@ -52,23 +52,25 @@ lib/mcp-installer/
 
 ```bash
 # Register to all installed clients
-npx your-mcp-package-register register --all
+npx -p your-mcp-package ytmcp register --all
 
 # Register to specific client
-npx your-mcp-package-register register --to claude-code
+npx -p your-mcp-package ytmcp register --to claude-code
 
 # List registration status
-npx your-mcp-package-register list
+npx -p your-mcp-package ytmcp list
 
 # Detect installed clients
-npx your-mcp-package-register detect
+npx -p your-mcp-package ytmcp detect
 
 # Verify configuration
-npx your-mcp-package-register verify --client claude-code
+npx -p your-mcp-package ytmcp verify --client claude-code
 
 # Unregister from client
-npx your-mcp-package-register unregister --from claude-code
+npx -p your-mcp-package ytmcp unregister --from claude-code
 ```
+
+**Note:** The `-p` flag tells npx which package to install, and `ytmcp` is the bin command name (short for "YouTube Transcript MCP"). You can customize this bin name in your package.json to match your project.
 
 ### As a JavaScript Library
 

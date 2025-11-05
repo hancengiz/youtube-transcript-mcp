@@ -53,12 +53,12 @@ npm install
 
 ```bash
 # Register to ALL installed MCP clients (Claude Code, Claude Desktop, Cursor, etc.)
-npx @fabriqa.ai/youtube-transcript-mcp-register register --all
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp register --all
 
 # Or register to a specific client
-npx @fabriqa.ai/youtube-transcript-mcp-register register --to claude-code
-npx @fabriqa.ai/youtube-transcript-mcp-register register --to claude-desktop
-npx @fabriqa.ai/youtube-transcript-mcp-register register --to cursor
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp register --to claude-code
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp register --to claude-desktop
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp register --to cursor
 ```
 
 **Supported clients:**
@@ -72,19 +72,19 @@ npx @fabriqa.ai/youtube-transcript-mcp-register register --to cursor
 **Other useful commands:**
 ```bash
 # Detect which MCP clients are installed
-npx @fabriqa.ai/youtube-transcript-mcp-register detect
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp detect
 
 # List registration status for all clients
-npx @fabriqa.ai/youtube-transcript-mcp-register list
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp list
 
 # Verify configuration for a specific client
-npx @fabriqa.ai/youtube-transcript-mcp-register verify --client claude-code
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp verify --client claude-code
 
 # Unregister from a client
-npx @fabriqa.ai/youtube-transcript-mcp-register unregister --from claude-code
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp unregister --from claude-code
 
 # Show all available commands
-npx @fabriqa.ai/youtube-transcript-mcp-register help
+npx -p @fabriqa.ai/youtube-transcript-mcp ytmcp help
 ```
 
 ### Alternative: Manual Configuration

@@ -7,7 +7,7 @@
   "bin": {
     "youtube-transcript-mcp": "./index.js",
     "youtube-transcript-mcp-install": "./update-config.js",
-    "youtube-transcript-mcp-register": "./lib/mcp-installer/cli.js"
+    "ytmcp": "./lib/mcp-installer/cli.js"
   },
   "scripts": {
     "start": "node index.js",
