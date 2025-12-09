@@ -5,9 +5,9 @@
 
 A Model Context Protocol (MCP) server that retrieves transcripts from YouTube videos for Claude Code. This server allows you to easily extract video transcripts without manually downloading or copying content, making it perfect for analyzing video content, summarizing talks, or extracting information from educational videos.
 
-**blog article about this mcp server** [One More Piece Built: Adding YouTube Analysis to My Learning Iron Man Suit](https://www.cengizhan.com/p/one-more-piece-built-adding-youtube) 
-**npm package**: [@fabriqa.ai/youtube-transcript-mcp](https://www.npmjs.com/package/@fabriqa.ai/youtube-transcript-mcp)
-**Author**: [Cengiz Han](https://cengizhan.com)
+- **blog article about this mcp server** [One More Piece Built: Adding YouTube Analysis to My Learning Iron Man Suit](https://www.cengizhan.com/p/one-more-piece-built-adding-youtube) 
+- **npm package**: [@fabriqa.ai/youtube-transcript-mcp](https://www.npmjs.com/package/@fabriqa.ai/youtube-transcript-mcp)
+- **Author**: [Cengiz Han](https://cengizhan.com)
 
 ## Features
 
